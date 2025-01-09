@@ -5,7 +5,8 @@ const usermodel = require("../models/usermodel");
 
 const stripe = new Stripe(process.env.stripe_Secretkey);
 
-FRONTEND_URL='https://orderjoy-backend.onrender.com/'
+const FRONTEND_URL = process.env.FRONTEND_URL || 'https://orderjoy-frontend.vercel.app/';
+
 exports.placeorder = async (req, res) => {
   try {
     // Ensure `items` in the request body includes `image`
