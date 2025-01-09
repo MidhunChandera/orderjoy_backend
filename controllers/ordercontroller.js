@@ -5,7 +5,7 @@ const usermodel = require("../models/usermodel");
 
 const stripe = new Stripe(process.env.stripe_Secretkey);
 
-FRONTEND_URL='http://localhost:5173/'
+FRONTEND_URL='https://orderjoy-backend.onrender.com/'
 exports.placeorder = async (req, res) => {
   try {
     // Ensure `items` in the request body includes `image`
