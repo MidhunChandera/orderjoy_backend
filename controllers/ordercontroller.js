@@ -5,7 +5,7 @@ const usermodel = require("../models/usermodel");
 
 const stripe = new Stripe(process.env.stripe_Secretkey);
 
-const FRONTEND_URL = process.env.FRONTEND_URL || 'https://orderjoy-frontend.vercel.app/';
+const FRONTEND_URL = 'https://orderjoy-frontend.vercel.app/';
 
 exports.placeorder = async (req, res) => {
   try {
